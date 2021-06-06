@@ -1,0 +1,8 @@
+---
+
+bspwm_packages:
+  - bspwm
+
+bspwm_supported_distributions:
+  - Archlinux
+  - Fedora

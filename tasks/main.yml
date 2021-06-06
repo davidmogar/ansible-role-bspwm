@@ -1,0 +1,25 @@
+---
+
+- block:
+    - name: Ensure bspwm is installed
+      become: yes
+      package:
+        name: "{{ bspwm_packages }}"
+        state: "{{ bspwm_package_state }}"
+
+    - name: Create config directory
+      file:
+        group: "{{ bspwm_user_id }}"
+        mode: 0755
+        owner: "{{ bspwm_user_id }}"
+        path: "{{ bspwm_user_dir }}/.config/bspwm"
+        state: directory
+
+    - name: Create bspwm config file
+      template:
+        dest: "{{ bspwm_user_dir }}/.config/bspwm/bspwmrc"
+        group: "{{ bspwm_user_id }}"
+        mode: 0644
+        owner: "{{ bspwm_user_id }}"
+        src: "bspwmrc.j2"
+  when: ansible_distribution in bspwm_supported_distributions

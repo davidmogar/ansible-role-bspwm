@@ -1,0 +1,6 @@
+---
+
+bspwm_package_state: "present"
+bspwm_template: "bspwmrc.j2"
+bspwm_user_dir: "{{ ansible_user_dir }}"
+bspwm_user_id: "{{ ansible_user_id }}"
