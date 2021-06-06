@@ -2,7 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d {{ range(1, bspwm_desktops) | join(' ') }}
+bspc monitor -d {{ range(1, bspwm_desktops + 1) | join(' ') }}
 
 {% for key, value in bspwm_config.items() %}
 bspc config {{ key }} {{ value }}
