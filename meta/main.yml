@@ -14,3 +14,4 @@ galaxy_info:
     - name: Fedora
       versions:
         - all
+  role_name: bspwm
