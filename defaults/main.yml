@@ -1,6 +1,12 @@
 ---
 
+bspwm_config:
+  border_width: 2
+  ignore_ewmh_focus: true
+  window_gap: 12
+bspwm_desktops: 10
 bspwm_package_state: "present"
+bspwm_rules: []
 bspwm_template: "bspwmrc.j2"
 bspwm_user_dir: "{{ ansible_user_dir }}"
 bspwm_user_id: "{{ ansible_user_id }}"
