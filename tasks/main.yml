@@ -20,4 +20,4 @@
     group: "{{ bspwm_user_id }}"
     mode: 0644
     owner: "{{ bspwm_user_id }}"
-    src: "bspwmrc.j2"
+    src: "{{ bspwm_template }}"
